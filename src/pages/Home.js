@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import './Home.css';
+import '../styling/Home.css';
 
 function Home() {
   return (
