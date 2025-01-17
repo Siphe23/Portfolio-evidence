@@ -1,12 +1,12 @@
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import Header from './components/Header';
-import Footer from './com';
-import Home from './components/Home';
-import About from './components/About';
-import Skills from './components/Skills';
-import Projects from './components/Projects';
-import Contact from './components/Contact';
+import Header from './components/Header'; 
+import Footer from './components/Footer'; 
+import Home from './pages/Home'; 
+import About from './pages/About'; 
+import Skills from './pages/Skills'; 
+import Projects from './pages/Projects'; 
+import Contact from './pages/Contact'; 
 
 function App() {
   return (
@@ -25,4 +25,3 @@ function App() {
 }
 
 export default App;
-

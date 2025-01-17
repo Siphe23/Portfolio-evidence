@@ -1,14 +1,13 @@
-// Skills.js
 import React from 'react';
-import '../styling/'; // Ensure this matches the provided CSS
+import '../styling/Skills.css';
 
 const Skills = () => {
   const skills = [
-    { id: 1, name: 'HTML', image: '/path-to-icons/html-icon.png' },
-    { id: 2, name: 'CSS', image: '/path-to-icons/css-icon.png' },
-    { id: 3, name: 'JavaScript', image: '/path-to-icons/js-icon.png' },
-    { id: 4, name: 'React', image: '/path-to-icons/react-icon.png' },
-    { id: 5, name: 'Node.js', image: '/path-to-icons/nodejs-icon.png' },
+    { id: 1, name: 'HTML', image: '/icons/html-icon.png' },
+    { id: 2, name: 'CSS', image: '/icons/css-icon.png' },
+    { id: 3, name: 'JavaScript', image: '/icons/js-icon.png' },
+    { id: 4, name: 'React', image: '/icons/react-icon.png' },
+    { id: 5, name: 'Node.js', image: '/icons/nodejs-icon.png' },
   ];
 
   return (

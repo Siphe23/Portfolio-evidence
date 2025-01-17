@@ -1,25 +1,24 @@
-// Projects.js
 import React from 'react';
-import '..styling/Projects.css'; // Ensure this matches the provided CSS
+import '../styling/Projects.css';
 
 const Projects = () => {
   const projects = [
     {
       id: 1,
       title: 'Weather App',
-      image: '/path-to-images/weather-app.png',
+      image: '/images/weather-app.png', // Updated path
       description: 'A real-time weather forecasting app.',
     },
     {
       id: 2,
       title: 'Recipe App',
-      image: '/path-to-images/recipe-app.png',
+      image: '/images/recipe-app.png', // Updated path
       description: 'An app for managing and searching recipes.',
     },
     {
       id: 3,
       title: 'Portfolio Website',
-      image: '/path-to-images/portfolio.png',
+      image: '/images/portfolio.png', // Updated path
       description: 'My personal portfolio built with React.',
     },
   ];
