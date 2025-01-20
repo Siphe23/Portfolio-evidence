@@ -1,88 +1,57 @@
+/* Contact.css */
+
 .contact {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  padding: 50px 10%;
-  background: linear-gradient(135deg, #1c1b22, #0f0e17);
-  color: #fff;
-  min-height: 100vh;
+  padding: 60px 20px;
+  background-color: #f3f3f3;
+  color: #333;
+  text-align: center;
 }
 
 .contact h2 {
-  font-size: 2.5rem;
+  font-size: 2rem;
+  font-weight: bold;
   margin-bottom: 20px;
-  color: #18d4ee;
-  text-align: center;
 }
 
 .contact form {
   display: flex;
   flex-direction: column;
-  gap: 15px;
-  max-width: 600px;
-  width: 100%;
-  background: #252525;
-  padding: 30px;
+  gap: 20px;
+  align-items: center;
+  max-width: 500px;
+  margin: 0 auto;
+  background-color: #fff;
+  padding: 20px;
   border-radius: 10px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 .contact label {
-  font-size: 1rem;
-  color: #d4d4d4;
+  font-size: 1.1rem;
+  margin-bottom: 8px;
 }
 
 .contact input,
 .contact textarea {
   width: 100%;
   padding: 10px;
-  font-size: 1rem;
-  color: #fff;
-  background: #333;
-  border: 1px solid #444;
+  border: 1px solid #ccc;
   border-radius: 5px;
-  outline: none;
-  transition: border-color 0.3s ease;
-}
-
-.contact input:focus,
-.contact textarea:focus {
-  border-color: #18d4ee;
-}
-
-.contact textarea {
-  resize: none;
-  height: 120px;
+  font-size: 1rem;
+  margin-bottom: 15px;
 }
 
 .contact button {
-  background-color: #18d4ee;
-  color: white;
   padding: 10px 20px;
-  font-size: 1rem;
+  background-color: #00d8ff;
+  color: white;
   border: none;
   border-radius: 5px;
   cursor: pointer;
-  transition: background-color 0.3s ease, transform 0.2s ease;
+  font-size: 1rem;
+  transition: background-color 0.3s;
 }
 
 .contact button:hover {
-  background-color: #14b1cb;
-  transform: scale(1.05);
-}
-
-/* Responsive Design */
-@media (max-width: 768px) {
-  .contact {
-    padding: 30px 5%;
-  }
-
-  .contact h2 {
-    font-size: 2rem;
-  }
-
-  .contact form {
-    padding: 20px;
-  }
+  background-color: #0099cc;
 }

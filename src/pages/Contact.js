@@ -5,7 +5,7 @@ function Contact() {
   return (
     <div className="contact">
       <h2>Contact Me</h2>
-      <form action="https://formspree.io/f/your-form-id" method="POST">
+      <form action="https://formspree.io/f/mzzzndyk" method="POST">
         <label>Name</label>
         <input type="text" name="name" required />
         <label>Email</label>
@@ -19,3 +19,4 @@ function Contact() {
 }
 
 export default Contact;
+

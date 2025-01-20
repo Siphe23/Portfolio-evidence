@@ -15,7 +15,7 @@ function Home() {
         <h2>Hello, It's Me</h2>
         <h1>Nasiphi Ndzumo</h1>
         <p>And I'm a Web Developer</p>
-        <a href="/Nasiphi_CV.pdf" download>
+        <a href="./CV/Nasiphi CV.pdf" download>
           <button className="btn">Download CV</button>
         </a>
       </div>
