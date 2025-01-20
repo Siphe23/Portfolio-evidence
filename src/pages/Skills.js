@@ -6,8 +6,8 @@ import '../styling/Skills.css';
 
 const Skills = () => {
   const skills = [
-    { id: 1, name: 'HTML', icon: faHtml5, proficiency: 'Intermediate', notes: 'Used in multiple projects.' },
-    { id: 2, name: 'CSS', icon: faCss3Alt, proficiency: 'Advanced', notes: 'Styled responsive layouts.' },
+    { id: 1, name: 'HTML', icon: faHtml5, proficiency: 'Advanced', notes: 'Used in multiple projects.' },
+    { id: 2, name: 'CSS', icon: faCss3Alt, proficiency: 'Intermediate', notes: 'Styled responsive layouts.' },
     { id: 3, name: 'JavaScript', icon: faJs, proficiency: 'Intermediate', notes: 'Built dynamic web applications.' },
     { id: 4, name: 'React', icon: faReact, proficiency: 'Intermediate', notes: 'Developed a to-do list app.' },
     { id: 5, name: 'Node.js', icon: faNodeJs, proficiency: 'Intermediate', notes: 'Built backend services with Express.' },

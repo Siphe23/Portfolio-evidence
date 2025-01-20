@@ -1,61 +1,42 @@
 .contact {
-  padding: 50px;
-  background-color: #f7f7f7;
+  padding: 50px 10%;
+  background: linear-gradient(135deg, #0f0e17, #1c1b22);
   text-align: center;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+}
+
+.contact h2 {
+  font-size: 2.5rem;
+  color: #18d4ee;
+  margin-bottom: 20px;
 }
 
 .contact form {
-  width: 100%;
-  max-width: 500px;
-  background-color: #fff;
-  padding: 30px;
-  border-radius: 8px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-items: center;
 }
 
-.contact input,
-.contact textarea {
-  width: 100%;
-  padding: 12px;
-  margin: 10px 0;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-  font-size: 1rem;
-}
-
-.contact button {
-  background-color: #4caf50;
-  color: white;
-  padding: 15px 25px;
+.contact input, .contact textarea {
+  width: 70%;
+  padding: 15px;
   font-size: 1rem;
   border: none;
   border-radius: 5px;
+  background: #1c1b22;
+  color: white;
+}
+
+.contact button {
+  padding: 10px 20px;
+  background: #18d4ee;
+  border: none;
+  color: white;
+  font-size: 1rem;
   cursor: pointer;
-  transition: background-color 0.3s ease;
+  border-radius: 5px;
 }
 
 .contact button:hover {
-  background-color: #45a049;
-}
-
-.contact p {
-  margin-top: 15px;
-  font-size: 1.2rem;
-  color: #333;
-}
-
-/* Responsive Design for Smaller Screens */
-@media (max-width: 768px) {
-  .contact form {
-    padding: 20px;
-    width: 90%;
-  }
-
-  .contact button {
-    width: 100%;
-    padding: 12px 20px;
-  }
+  background: #14b1cb;
 }
