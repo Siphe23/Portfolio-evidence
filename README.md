@@ -73,5 +73,6 @@ Feel free to reach out if you'd like to collaborate or learn more about my work:
 
 Name: Nasiphi Ndzumo
 GitHub: Siphe23
+
 Email: YourEmail@example.com
 Thank you for visiting my portfolio! 😊

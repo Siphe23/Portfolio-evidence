@@ -8,7 +8,7 @@ function Header() {
   return (
     <header className="header">
       <div className="container">
-        <h1 className="logo">Nasiphi Ndzumo.</h1>
+        <h1 className="logo">Nasiphi <span>Ndzumo.</span></h1>
         <nav>
           <ul className="nav-links">
             <li><Link to="/"><FaHome style={{ marginRight: '5px' }} />Home</Link></li>
