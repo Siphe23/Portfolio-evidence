@@ -62,7 +62,15 @@
    transform: translateY(-3px); /* Slight upward movement */
    box-shadow: 0px 10px 20px rgba(24, 212, 238, 0.4); /* Glowing shadow */
  }
- 
+ h1 span {
+  color: white;
+
+}
+.intro h1 span {
+  color: #18d4ee;
+}
+
+
  /* Ripple effect on click */
  .intro .btn:active::after {
    content: "";
