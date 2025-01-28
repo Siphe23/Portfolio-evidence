@@ -1,5 +1,5 @@
 import React from 'react';
-import './Group.css'; // Import external CSS for styling
+import '../styling/Group.css'; 
 
 function Group() {
     return (
