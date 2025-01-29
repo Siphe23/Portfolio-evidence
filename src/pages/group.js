@@ -3,6 +3,7 @@ import '../styling/Group.css';
 
 function Group() {
     return (
+        <section className="group">
         <div className="group-container">
             <section className="group-card">
                 <div className="group-header" style={{ borderLeft: '5px solid #18d4ee' }}>
@@ -74,6 +75,7 @@ function Group() {
                 </div>
             </section>
         </div>
+        </section>
     );
 }
 
