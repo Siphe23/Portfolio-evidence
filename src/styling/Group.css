@@ -1,4 +1,32 @@
-/* Group.css */
+/* Add animation to the header */
+.group-header h1 {
+    font-size: 36px;
+    color: #333;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 30px;
+    animation: fadeIn 2s ease-in-out;
+}
+
+/* Style the 'Group' text to be white */
+.group-header h1 span {
+    color: #fff;
+    font-weight: bold;
+    margin-left: 5px;
+}
+
+/* Add a fade-in animation */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+/* Existing group card styling */
 .group-container {
     display: flex;
     flex-direction: column;
@@ -17,7 +45,7 @@
 }
 
 .group-card:hover {
-    transform: translateY(-10px); /* Adds hover effect */
+    transform: translateY(-10px);
 }
 
 .group-header h2 {

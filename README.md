@@ -62,7 +62,7 @@ Start the development server:
 bash
 Copy
 npm start
-Open your browser and visit http://localhost:3000 to view the portfolio.
+Open your browser and visit https://portfolio-evidence-git-main-nasiphis-projects-f287cdf3.vercel.app to view the portfolio.
 
 Live Deployment
 The portfolio is live and accessible at the following link:

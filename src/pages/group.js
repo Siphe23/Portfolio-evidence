@@ -4,7 +4,9 @@ import '../styling/Group.css';
 function Group() {
     return (
         <div className="group-container">
+             <h1><spa>Group</spa> Work:</h1>
             <section className="group-card">
+               
                 <div className="group-header" style={{ borderLeft: '5px solid #18d4ee' }}>
                     <h2>Project Name 1</h2>
                 </div>

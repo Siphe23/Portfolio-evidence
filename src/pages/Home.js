@@ -1,5 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
+import { Link } from 'react-router-dom'; // Import Link for navigation
 import '../styling/Home.css';
 import nasiphiImg from "../nasiphi.png.png"; 
 
@@ -16,16 +17,17 @@ function Home() {
         <h1><span>N</span>asiphi Ndz<span>umo</span></h1>
         <p>And I'm a Web Developer</p>
 
-       
-        
-
         {/* Button container for additional buttons */}
         <div className="btn-container">
-        <a href="./CV/Nasiphi CV.pdf" download>
-          <button className="btn">Download CV</button>
-        </a>
-          <button className="btn">Assessment</button>
-          <button className="btn">Group Work</button>
+          <a href="./CV/Nasiphi CV.pdf" download>
+            <button className="btn">Download CV</button>
+          </a>
+          <Link to="/assessment">
+            <button className="btn">Assessment</button>
+          </Link>
+          <Link to="/group">
+            <button className="btn">Group Work</button>
+          </Link>
         </div>
       </div>
 
@@ -38,4 +40,3 @@ function Home() {
 }
 
 export default Home;
-
