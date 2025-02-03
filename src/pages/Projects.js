@@ -23,7 +23,7 @@ const Projects = () => {
       keyFeatures: ['Real-time weather data', 'Search by city or location', 'Responsive design'],
       challenges: ['Handling API rate limits', 'Ensuring mobile responsiveness'],
       repoLink: 'https://github.com/Siphe23/weather-app.git',
-      deployedLink: 'https://weather-app-deployment-link.com',
+      deployedLink: 'https://weather-jn5n9alqa-nasiphis-projects-f287cdf3.vercel.app/login',
     },
     {
       id: 2,
