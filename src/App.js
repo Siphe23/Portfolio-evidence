@@ -7,7 +7,7 @@ import About from './pages/About';
 import Skills from './pages/Skills'; 
 import Projects from './pages/Projects'; 
 import Contact from './pages/Contact'; 
-import Group from './pages/Group';
+import Collabs from './pages/Collabs';
 import Assessment from './pages/Assesments'; 
 
 function App() {
@@ -20,7 +20,7 @@ function App() {
         <Route path="/skills" element={<Skills />} />
         <Route path="/projects" element={<Projects />} />
         <Route path="/assessment" element={<Assessment />} /> {/* Ensure the route matches */}
-        <Route path="/group" element={<Group />} />
+        <Route path="/collabs" element={<Collabs />} />
         <Route path="/contact" element={<Contact />} />
       </Routes>
       <Footer />
