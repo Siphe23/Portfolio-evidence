@@ -1,14 +1,14 @@
 import React, { useState } from 'react';
 import '../styling/Projects.css';
 
-// Import images for projects that have them
+
 import weatherImg from '../images/weather.png';
 import recordImg from '../images/record.png';
 import todoImg from '../images/todo.png';
 
 const Projects = () => {
   const [expanded, setExpanded] = useState({});
-  const [showMore, setShowMore] = useState(false);  // State to toggle visibility of more projects
+  const [showMore, setShowMore] = useState(false); 
 
   const toggleExpand = (id) => {
     setExpanded((prev) => ({ ...prev, [id]: !prev[id] }));
@@ -48,7 +48,7 @@ const Projects = () => {
       repoLink: 'https://github.com/Siphe23/Todo-list.git',
       deployedLink: 'https://todo-list-ten-psi-29.vercel.app/',
     },
-    // New projects (only visible if 'showMore' is true)
+   
     ...(showMore ? [
       {
         id: 4,
@@ -58,7 +58,7 @@ const Projects = () => {
         keyFeatures: ['Add, remove, and update books', 'User authentication and authorization', 'Search for books'],
         challenges: ['Designing the MongoDB schema', 'Implementing user roles and permissions'],
         repoLink: 'https://github.com/Siphe23/Library-Management-System.git',
-        deployedLink: 'https://library-management-system.com',
+        deployedLink: 'age-form-had4ygee6-nasiphis-projects-f287cdf3.vercel.app',
       },
       {
         id: 5,
@@ -69,12 +69,23 @@ const Projects = () => {
         challenges: ['Implementing authentication and authorization with JWT', 'Structuring API endpoints efficiently'],
         repoLink: 'https://github.com/Siphe23/Recipe-App-API.git',
         deployedLink: 'https://recipe-app-api.com',
-      }
+      },
+      {
+        id: 6,
+        title: 'E-commerce API',
+        description: 'A RESTful API for an e-commerce platform with user authentication.',
+        techStack: ['Node.js', 'Express', 'MongoDB'],
+        keyFeatures: ['Product CRUD operations', 'User authentication', 'Payment integration'],
+        challenges: ['Managing inventory and orders', 'Ensuring secure payment transactions'],
+        repoLink: 'https://github.com/Siphe23/Ecommerce-API.git',
+        deployedLink: 'https://ecommerce-api.com',
+      },
+     
     ] : [])
   ];
 
   const handleShowMore = () => {
-    setShowMore(prev => !prev);  // Toggle showMore state
+    setShowMore(prev => !prev);  
   };
 
   return (
