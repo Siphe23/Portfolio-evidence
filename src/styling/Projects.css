@@ -22,19 +22,30 @@
 }
 
 /* Project Card */
-.project-card {
-  background-color: #fff;
-  border-radius: 8px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-  padding: 15px;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-  text-align: left;
-  max-width: 280px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin: auto;
+/* New project images (optional for new projects) */
+.project-card img {
+  width: 100%;
+  height: auto;
+  border-radius: 5px;
 }
+
+/* Adjusting the "Show More" button */
+.more-btn {
+  background-color: #18d4ee;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  margin: 20px 0;
+  cursor: pointer;
+  border-radius: 5px;
+  font-size: 16px;
+  transition: background 0.3s;
+}
+
+.more-btn:hover {
+  background-color: #14b8cc;
+}
+
 
 .project-card:hover {
   transform: translateY(-5px);

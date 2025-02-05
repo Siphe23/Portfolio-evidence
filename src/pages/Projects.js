@@ -1,13 +1,14 @@
 import React, { useState } from 'react';
 import '../styling/Projects.css';
 
-// Import images
+// Import images for projects that have them
 import weatherImg from '../images/weather.png';
 import recordImg from '../images/record.png';
 import todoImg from '../images/todo.png';
 
 const Projects = () => {
   const [expanded, setExpanded] = useState({});
+  const [showMore, setShowMore] = useState(false);  // State to toggle visibility of more projects
 
   const toggleExpand = (id) => {
     setExpanded((prev) => ({ ...prev, [id]: !prev[id] }));
@@ -47,7 +48,34 @@ const Projects = () => {
       repoLink: 'https://github.com/Siphe23/Todo-list.git',
       deployedLink: 'https://todo-list-ten-psi-29.vercel.app/',
     },
+    // New projects (only visible if 'showMore' is true)
+    ...(showMore ? [
+      {
+        id: 4,
+        title: 'Library Management System',
+        description: 'A library management system that handles books, users, and library operations.',
+        techStack: ['Node.js', 'Express', 'MongoDB'],
+        keyFeatures: ['Add, remove, and update books', 'User authentication and authorization', 'Search for books'],
+        challenges: ['Designing the MongoDB schema', 'Implementing user roles and permissions'],
+        repoLink: 'https://github.com/Siphe23/Library-Management-System.git',
+        deployedLink: 'https://library-management-system.com',
+      },
+      {
+        id: 5,
+        title: 'Recipe App',
+        description: 'A RESTful API for a Recipe App with user authentication and MongoDB integration.',
+        techStack: ['Node.js', 'Express', 'MongoDB', 'JWT Authentication'],
+        keyFeatures: ['Create, read, update, and delete recipes', 'User authentication', 'Filter recipes by category'],
+        challenges: ['Implementing authentication and authorization with JWT', 'Structuring API endpoints efficiently'],
+        repoLink: 'https://github.com/Siphe23/Recipe-App-API.git',
+        deployedLink: 'https://recipe-app-api.com',
+      }
+    ] : [])
   ];
+
+  const handleShowMore = () => {
+    setShowMore(prev => !prev);  // Toggle showMore state
+  };
 
   return (
     <div className="projects">
@@ -55,7 +83,7 @@ const Projects = () => {
       <div className="project-grid">
         {projects.map((project) => (
           <div className="project-card" key={project.id}>
-            <img src={project.image} alt={project.title} />
+            {project.image && <img src={project.image} alt={project.title} />}
             <h3>{project.title}</h3>
             <p>{project.description}</p>
             <p><strong>Tech Stack:</strong> {project.techStack.join(', ')}</p>
@@ -98,6 +126,9 @@ const Projects = () => {
           </div>
         ))}
       </div>
+      <button className="more-btn" onClick={handleShowMore}>
+        {showMore ? 'Show Less' : 'Show More Projects'}
+      </button>
     </div>
   );
 };
