@@ -1,42 +1,80 @@
 .contact {
-  padding: 50px 10%;
-  background: linear-gradient(135deg, #0f0e17, #1c1b22);
+  padding: 60px 10%;
+  background: linear-gradient(135deg, #0f0e17, #6a8f9b);
   text-align: center;
 }
 
 .contact h2 {
   font-size: 2.5rem;
   color: #18d4ee;
-  margin-bottom: 20px;
+  margin-bottom: 25px;
 }
+
 
 .contact form {
   display: flex;
   flex-direction: column;
-  gap: 20px;
+  gap: 18px;
   align-items: center;
+  background: rgba(255, 255, 255, 0.05);
+  padding: 40px;
+  border-radius: 10px;
+  width: 100%;
+  max-width: 550px;
+  min-height: 450px; 
+  margin: 0 auto;
 }
+
 
 .contact input, .contact textarea {
-  width: 70%;
+  width: 100%;
   padding: 15px;
   font-size: 1rem;
-  border: none;
+  border: 1px solid rgba(255, 255, 255, 0.2);
   border-radius: 5px;
-  background: #1c1b22;
+  background: #22212a;
   color: white;
+  outline: none;
+  transition: all 0.3s ease;
 }
 
+
+.contact input:focus, .contact textarea:focus {
+  border-color: #18d4ee;
+  box-shadow: 0 0 8px rgba(24, 212, 238, 0.5);
+}
+
+.contact textarea {
+  height: 150px; 
+  resize: none;
+}
+
+
 .contact button {
-  padding: 10px 20px;
+  padding: 14px 30px;
   background: #18d4ee;
   border: none;
   color: white;
   font-size: 1rem;
   cursor: pointer;
   border-radius: 5px;
+  font-weight: bold;
+  transition: all 0.3s ease;
 }
 
 .contact button:hover {
   background: #14b1cb;
+  transform: scale(1.05);
+}
+
+
+@media (max-width: 600px) {
+  .contact {
+    padding: 30px 5%;
+  }
+  
+  .contact form {
+    width: 90%;
+    min-height: 500px; 
+  }
 }

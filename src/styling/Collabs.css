@@ -1,0 +1,105 @@
+
+.collabs {
+    text-align: center;
+    padding: 50px 20px;
+    background-color: #f4f4f4;
+}
+
+
+.collabs h1 {
+    font-size: 36px;
+    color: #333;
+    font-weight: bold;
+    margin-bottom: 30px;
+    animation: fadeIn 1.5s ease-in-out;
+}
+
+.collabs h1 span {
+    color: #18d4ee;
+}
+
+
+.collabs-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+
+.collab-card {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    transition: transform 0.3s ease-in-out;
+    display: flex;
+    flex-direction: column;
+}
+
+
+.collab-card:hover {
+    transform: translateY(-5px);
+}
+
+.collab-header {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    border-left: 5px solid #18d4ee;
+    background-color: #e6f7fb;
+    border-radius: 5px;
+    margin-bottom: 15px;
+}
+
+.collab-header h2 {
+    font-size: 22px;
+    color: #333;
+    margin: 0;
+}
+
+
+.collab-content {
+    text-align: left;
+    font-size: 16px;
+    color: #555;
+    line-height: 1.6;
+}
+
+
+.collab-content ul {
+    padding-left: 20px;
+}
+
+.collab-content ul li {
+    margin-bottom: 5px;
+}
+
+
+.collab-content a {
+    color: #18d4ee;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.collab-content a:hover {
+    text-decoration: underline;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+
+@media (max-width: 768px) {
+    .collabs-container {
+        flex-direction: column;
+        align-items: center;
+    }
+}

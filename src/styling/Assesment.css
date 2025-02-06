@@ -1,0 +1,48 @@
+.assessments {
+    padding: 50px 10%;
+    background: linear-gradient(135deg, #0f0e17, #6a8f9b);
+    color: white;
+    text-align: center;
+}
+
+.assessments h2, .assessments h3, .assessments h4 {
+    color: #18d4ee;
+}
+
+.assessments table {
+    width: 100%;
+    margin-top: 20px;
+    border-collapse: collapse;
+    background: #1c1b22;
+    color: white;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.assessments th, .assessments td {
+    padding: 15px;
+    border: 1px solid #333;
+    text-align: center;
+}
+
+.assessments th {
+    background: #18d4ee;
+    color: black;
+}
+
+.assessments a {
+    color: #18d4ee;
+    text-decoration: none;
+}
+
+.assessments ul {
+    list-style: none;
+    padding: 0;
+}
+
+.assessments li {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 5px;
+}
