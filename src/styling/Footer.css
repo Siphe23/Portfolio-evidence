@@ -33,7 +33,7 @@
   color: #fff;
 }
 
-/* Media query for screens smaller than 1080px */
+
 @media (max-width: 1080px) {
   .footer {
     padding: 20px 8%;
@@ -54,7 +54,7 @@
   }
 }
 
-/* Media query for screens smaller than 768px */
+
 @media (max-width: 768px) {
   .footer {
     padding: 15px 5%;
@@ -69,7 +69,7 @@
   }
 }
 
-/* Media query for screens smaller than 600px */
+
 @media (max-width: 600px) {
   .footer {
     padding: 10px 5%;

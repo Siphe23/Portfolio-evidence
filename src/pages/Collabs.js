@@ -1,5 +1,5 @@
 import React from 'react'; 
-import { motion } from 'framer-motion'; // Importing framer-motion for animation
+import { motion } from 'framer-motion'; 
 import "../styling/Collabs.css";
 
 function Collabs() {

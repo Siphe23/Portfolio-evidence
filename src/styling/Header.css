@@ -37,7 +37,17 @@
   color: #18d4ee;
 }
 
-/* Media query for screens smaller than 1080px */
+
+.hamburger {
+  display: none;
+  cursor: pointer;
+}
+
+.hamburger.open {
+  transform: rotate(90deg); 
+}
+
+
 @media (max-width: 1080px) {
   .header {
     padding: 15px 8%;
@@ -56,7 +66,7 @@
   }
 }
 
-/* Media query for screens smaller than 768px */
+
 @media (max-width: 768px) {
   .container {
     flex-direction: column;
@@ -71,10 +81,20 @@
     flex-direction: column;
     gap: 10px;
     align-items: flex-start;
+    display: none; 
+  }
+
+  .nav-links.active {
+    display: flex; 
+  }
+
+
+  .hamburger {
+    display: block;
   }
 }
 
-/* Media query for screens smaller than 600px */
+
 @media (max-width: 600px) {
   .header {
     padding: 10px 5%;

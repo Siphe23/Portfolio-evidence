@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { FaGithub, FaExternalLinkAlt } from 'react-icons/fa'; // Importing icons
+import { FaGithub, FaExternalLinkAlt } from 'react-icons/fa'; 
 import '../styling/Projects.css';
 
 function Projects() {

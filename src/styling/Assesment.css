@@ -47,7 +47,7 @@
     border-radius: 5px;
 }
 
-/* Media query for screens smaller than 1080px */
+
 @media (max-width: 1080px) {
     .assessments {
         padding: 20px 5%;

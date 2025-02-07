@@ -1,14 +1,14 @@
-/* Highlighting mLab with green and Lab in white */
+
 .mlab-highlight {
-  color: #138313; /* Green color for mLab */
+  color: #138313; 
   font-weight: bold;
 }
 
 .mlab-highlight span {
-  color: white; /* White color for the "Lab" part */
+  color: white; 
 }
 
-/* Other styles remain unchanged */
+
 .home { 
   display: flex;
   align-items: center;
@@ -127,7 +127,7 @@ h1 span {
   font-size: 1rem;
 }
 
-/* Responsive Media Queries */
+
 @media (max-width: 1080px) {
   .home {
     flex-direction: column;

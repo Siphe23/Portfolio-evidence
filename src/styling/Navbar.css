@@ -33,15 +33,20 @@
   .hamburger {
     display: none;
     cursor: pointer;
+    transition: transform 0.3s ease-in-out;
   }
   
-  .hamburger svg {
-    font-size: 30px;
+  .hamburger.open {
+    transform: rotate(90deg); 
   }
   
   @media (max-width: 768px) {
     .hamburger {
-      display: block; /* Show hamburger icon on smaller screens */
+      display: block;
+    }
+  
+    .hamburger.open {
+      transform: rotate(90deg); 
     }
   
     .nav-links {
@@ -54,11 +59,14 @@
       background-color: #333;
       width: 200px;
       padding: 20px;
-      display: none; /* Hide nav links by default */
+      display: none;
     }
   
     .nav-links.active {
-      display: flex; /* Show the menu when active */
+      display: flex;
     }
   }
+  
+  
+ 
   
