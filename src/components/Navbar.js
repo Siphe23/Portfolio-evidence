@@ -1,13 +1,22 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-import { FaHome, FaUserAlt, FaToolbox, FaProjectDiagram, FaEnvelope } from 'react-icons/fa'; // Import icons
+import { FaHome, FaUserAlt, FaToolbox, FaProjectDiagram, FaEnvelope, FaBars } from 'react-icons/fa'; // Import icons
 import '../styling/Navbar.css';
 
 function Navbar() {
+  const [isMenuOpen, setIsMenuOpen] = useState(false); // State to toggle the menu
+
+  const toggleMenu = () => {
+    setIsMenuOpen(!isMenuOpen);
+  };
+
   return (
     <nav className="navbar">
       <h1 className="logo">Portfolio.</h1>
-      <ul className="nav-links">
+      <div className="hamburger" onClick={toggleMenu}>
+        <FaBars />
+      </div>
+      <ul className={`nav-links ${isMenuOpen ? 'active' : ''}`}>
         <li><Link to="/"><FaHome style={{ marginRight: '5px' }} />Home</Link></li>
         <li><Link to="/about"><FaUserAlt style={{ marginRight: '5px' }} />About</Link></li>
         <li><Link to="/skills"><FaToolbox style={{ marginRight: '5px' }} />Skills</Link></li>
@@ -19,11 +28,6 @@ function Navbar() {
 }
 
 export default Navbar;
-
-
-
-
-
 
 
 

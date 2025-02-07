@@ -19,7 +19,7 @@ function App() {
         <Route path="/about" element={<About />} />
         <Route path="/skills" element={<Skills />} />
         <Route path="/projects" element={<Projects />} />
-        <Route path="/assessment" element={<Assessment />} /> {/* Ensure the route matches */}
+        <Route path="/assessment" element={<Assessment />} /> 
         <Route path="/collabs" element={<Collabs />} />
         <Route path="/contact" element={<Contact />} />
       </Routes>

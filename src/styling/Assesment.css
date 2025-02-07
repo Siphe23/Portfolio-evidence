@@ -71,7 +71,6 @@
     }
 }
 
-/* Additional media query for screens smaller than 768px (mobile devices) */
 @media (max-width: 768px) {
     .assessments {
         padding: 15px 2%;

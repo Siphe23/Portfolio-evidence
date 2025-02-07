@@ -63,7 +63,7 @@
   transform: scale(1.05);
 }
 
-/* Media query for screens smaller than 1080px */
+
 @media (max-width: 1080px) {
   .contact {
     padding: 40px 8%;
