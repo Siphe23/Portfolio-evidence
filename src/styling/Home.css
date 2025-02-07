@@ -1,4 +1,15 @@
-.home {
+/* Highlighting mLab with green and Lab in white */
+.mlab-highlight {
+  color: #138313; /* Green color for mLab */
+  font-weight: bold;
+}
+
+.mlab-highlight span {
+  color: white; /* White color for the "Lab" part */
+}
+
+/* Other styles remain unchanged */
+.home { 
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -69,7 +80,6 @@ h1 span {
   color: #18d4ee;
 }
 
-/* Ripple effect on click */
 .intro .btn:active::after {
   content: "";
   position: absolute;
@@ -96,7 +106,28 @@ h1 span {
   box-shadow: 0 0 25px rgba(24, 212, 238, 0.5);
 }
 
-/* Media query for screens smaller than 1080px */
+.contact-info {
+  margin-top: 1.5rem;
+  font-size: 1.2rem;
+  color: #d4d4d4;
+  line-height: 1.6;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.contact-info .icon {
+  color: #18d4ee;
+  margin-right: 10px;
+}
+
+.contact-info p {
+  display: flex;
+  align-items: center;
+  font-size: 1rem;
+}
+
+/* Responsive Media Queries */
 @media (max-width: 1080px) {
   .home {
     flex-direction: column;
@@ -132,7 +163,6 @@ h1 span {
   }
 }
 
-/* Media query for screens smaller than 768px */
 @media (max-width: 768px) {
   .home {
     padding: 0 5%;
@@ -155,7 +185,6 @@ h1 span {
   }
 }
 
-/* Media query for screens smaller than 600px */
 @media (max-width: 600px) {
   .intro h1 {
     font-size: 2rem;
