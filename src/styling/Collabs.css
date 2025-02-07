@@ -1,7 +1,7 @@
 .collabs { 
     text-align: center;
     padding: 50px 20px;
-    background-color: #f4f4f4;
+    background: linear-gradient(135deg, #0f0e17, #6a8f9b);
 }
 
 .collabs h1 {
@@ -16,6 +16,11 @@
     color: #18d4ee;
 }
 
+.collabs h1 .work {
+    color: #fff; 
+}
+
+
 .collabs-container {
     display: flex;
     flex-direction: column;
@@ -25,7 +30,7 @@
 }
 
 .collab-card {
-    background-color: #fff;
+    background-color: #121d27;
     border-radius: 8px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
     padding: 20px;
@@ -57,7 +62,7 @@
 .collab-content {
     text-align: left;
     font-size: 16px;
-    color: #555;
+    color: #18d4ee;
     line-height: 1.6;
 }
 
