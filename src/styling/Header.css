@@ -37,16 +37,18 @@
   color: #18d4ee;
 }
 
-
 .hamburger {
   display: none;
   cursor: pointer;
+  position: absolute; 
+  left: 20px; 
+  top: 20px;  
+  transition: transform 0.3s ease-in-out;
 }
 
 .hamburger.open {
   transform: rotate(90deg); 
 }
-
 
 @media (max-width: 1080px) {
   .header {
@@ -65,7 +67,6 @@
     font-size: 0.9rem;
   }
 }
-
 
 @media (max-width: 768px) {
   .container {
@@ -91,9 +92,10 @@
 
   .hamburger {
     display: block;
+    left: 20px; 
+    top: 20px;  
   }
 }
-
 
 @media (max-width: 600px) {
   .header {
