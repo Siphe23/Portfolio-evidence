@@ -1,105 +1,175 @@
-import React from 'react';
+import React, { useState } from 'react';
+import { FaGithub, FaExternalLinkAlt } from 'react-icons/fa'; // Importing icons
 import '../styling/Projects.css';
 
-// Import images
-import weatherImg from '../images/weather.png';
-import recordImg from '../images/record.png';
-import todoImg from '../images/todo.png';
+function Projects() {
+  const [expandedCategory, setExpandedCategory] = useState(null);
 
-const Projects = () => {
-  const projects = [
+  const toggleCategory = (category) => {
+    setExpandedCategory(expandedCategory === category ? null : category);
+  };
+
+  const projectsData = [
     {
-      id: 1,
-      title: 'Weather App',
-      image: weatherImg,
-      description: 'A real-time weather forecasting app built with React and external APIs.',
-      techStack: ['React', 'OpenWeather API', 'CSS'],
-      keyFeatures: [
-        'Real-time weather data',
-        'Search by city or location',
-        'Responsive design for mobile and desktop',
+      category: 'UI Challenges',
+      projects: [
+        {
+          name: 'Scan code',
+          github: 'https://github.com/yourusername/scan-code',
+          deployed: 'https://yourusername.github.io/scan-code',
+        },
+        {
+          name: 'Intro Section with Dropdown Navigation',
+          github: 'https://github.com/yourusername/intro-dropdown',
+          deployed: 'https://yourusername.github.io/intro-dropdown',
+        },
       ],
-      challenges: [
-        'Dealing with API rate limits and response delays. Resolved by implementing caching.',
-        'Ensuring responsiveness across different screen sizes.',
-      ],
-      repoLink: 'https://github.com/Siphe23/weather-app.git',
-      deployedLink: 'https://weather-app-deployment-link.com',
     },
     {
-      id: 2,
-      title: 'Recording App',
-      image: recordImg,
-      description: 'An app for recording audio using React Native.',
-      techStack: ['React Native', 'Expo Audio API'],
-      keyFeatures: [
-        'Record, play, and delete audio clips',
-        'Save recordings to local storage',
-        'Playback speed adjustment',
+      category: 'React.js',
+      projects: [
+        {
+          name: 'Age Calculator',
+          github: 'https://github.com/yourusername/age-calculator',
+          deployed: 'https://yourusername.github.io/age-calculator',
+        },
+        {
+          name: 'Employee App',
+          github: 'https://github.com/yourusername/employee-app',
+          deployed: 'https://yourusername.github.io/employee-app',
+        },
+        {
+          name: 'To-Do List App',
+          github: 'https://github.com/yourusername/to-do-list-app',
+          deployed: 'https://yourusername.github.io/to-do-list-app',
+        },
+        {
+          name: 'Shopping List App',
+          github: 'https://github.com/yourusername/shopping-list-app',
+          deployed: 'https://yourusername.github.io/shopping-list-app',
+        },
+        {
+          name: 'Weather App',
+          github: 'https://github.com/yourusername/weather-app',
+          deployed: 'https://yourusername.github.io/weather-app',
+        },
+        {
+          name: 'Recipe App',
+          github: 'https://github.com/yourusername/recipe-app',
+          deployed: 'https://yourusername.github.io/recipe-app',
+        },
       ],
-      challenges: [
-        'Handling large audio files with mobile devices. Optimized file handling with smaller buffer sizes.',
-        'Dealing with device permission issues for microphone access.',
-      ],
-      repoLink: 'https://github.com/Siphe23/AudioRecordingApp-Native.git',
-      deployedLink: 'https://recording-app-deployment-link.com',
     },
     {
-      id: 3,
-      title: 'To-do List App',
-      image: todoImg,
-      description: 'A simple to-do list app built with React.',
-      techStack: ['React', 'CSS'],
-      keyFeatures: [
-        'Add, edit, and delete tasks',
-        'Mark tasks as completed',
-        'Filter tasks by status',
+      category: 'Node.js',
+      projects: [
+        {
+          name: 'Server.js',
+          github: 'https://github.com/yourusername/server-js',
+          deployed: 'https://yourusername.github.io/server-js',
+        },
+        {
+          name: 'Shopping Node.js',
+          github: 'https://github.com/yourusername/shopping-nodejs',
+          deployed: 'https://yourusername.github.io/shopping-nodejs',
+        },
+        {
+          name: 'Quiz App',
+          github: 'https://github.com/yourusername/quiz-app',
+          deployed: 'https://yourusername.github.io/quiz-app',
+        },
+        {
+          name: 'Memory Game',
+          github: 'https://github.com/yourusername/memory-game',
+          deployed: 'https://yourusername.github.io/memory-game',
+        },
       ],
-      challenges: [
-        'Managing state across the app. Resolved by using React hooks (useState, useEffect).',
-        'Ensuring proper task persistence across sessions using localStorage.',
+    },
+    {
+      category: 'MERN Stack',
+      projects: [
+        {
+          name: 'Hotel App',
+          github: 'https://github.com/yourusername/hotel-app',
+          deployed: 'https://yourusername.github.io/hotel-app',
+        },
       ],
-      repoLink: 'https://github.com/Siphe23/Todo-list.git',
-      deployedLink: 'https://todo-list-ten-psi-29.vercel.app/',
+    },
+    {
+      category: 'React Native',
+      projects: [
+        {
+          name: 'Birthday Card',
+          github: 'https://github.com/yourusername/birthday-card',
+          deployed: 'https://yourusername.github.io/birthday-card',
+        },
+        {
+          name: 'Audio Recording App',
+          github: 'https://github.com/yourusername/audio-recording',
+          deployed: 'https://yourusername.github.io/audio-recording',
+        },
+        {
+          name: 'Payment Gateway',
+          github: 'https://github.com/yourusername/payment-gateway',
+          deployed: 'https://yourusername.github.io/payment-gateway',
+        },
+        {
+          name: 'Gallery App',
+          github: 'https://github.com/yourusername/gallery-app',
+          deployed: 'https://yourusername.github.io/gallery-app',
+        },
+        {
+          name: 'Shopping List App',
+          github: 'https://github.com/yourusername/shopping-list-app-react-native',
+          deployed: 'https://yourusername.github.io/shopping-list-app-react-native',
+        },
+      ],
     },
   ];
 
   return (
-    <div className="projects">
-      <h2>My Projects</h2>
-      <div className="project-grid">
-        {projects.map((project) => (
-          <div className="project-card" key={project.id}>
-            <img src={project.image} alt={project.title} />
-            <h3>{project.title}</h3>
-            <p>{project.description}</p>
-            <p><strong>Tech Stack:</strong> {project.techStack.join(', ')}</p>
-            <div className="key-features">
-              <h4>Key Features:</h4>
-              <ul>
-                {project.keyFeatures.map((feature, index) => (
-                  <li key={index}>{feature}</li>
-                ))}
-              </ul>
+    <div className="projects-container">
+      <h1 className="projects-title">My Projects</h1>
+      <div className="projects-grid">
+        {projectsData.map((category) => (
+          <div key={category.category} className="project-card">
+            <div className="card-header">
+              <h2 className="card-title">{category.category}</h2>
+              <button
+                className="toggle-button"
+                onClick={() => toggleCategory(category.category)}
+              >
+                {expandedCategory === category.category ? 'Less' : 'More'}
+              </button>
             </div>
-            <div className="challenges">
-              <h4>Challenges Faced:</h4>
-              <ul>
-                {project.challenges.map((challenge, index) => (
-                  <li key={index}>{challenge}</li>
-                ))}
-              </ul>
-            </div>
-            <div className="project-links">
-              <a href={project.repoLink} target="_blank" rel="noopener noreferrer">
-                GitHub Repo
-              </a>
-              {project.deployedLink && (
-                <a href={project.deployedLink} target="_blank" rel="noopener noreferrer">
-                  View Deployed
-                </a>
-              )}
-            </div>
+            <ul className="project-list">
+              {(expandedCategory === category.category
+                ? category.projects
+                : category.projects.slice(0, 3)
+              ).map((project, index) => (
+                <li key={index} className="project-item">
+                  <span className="project-icon">🔹</span> {project.name}
+                  <div className="project-links">
+                    <a
+                      href={project.github}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="link-icon"
+                    >
+                      <FaGithub /> GitHub
+                    </a>
+                    <a
+                      href={project.deployed}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="link-icon"
+                    >
+                      <FaExternalLinkAlt /> Live Demo
+                    </a>
+                  </div>
+                </li>
+              ))}
+            </ul>
           </div>
         ))}
       </div>
@@ -108,3 +178,4 @@ const Projects = () => {
 }
 
 export default Projects;
+
