@@ -4,7 +4,7 @@
   align-items: center;
   min-height: 100vh;
   padding: 50px 10%;
-  background: #0f0e17;
+  background: linear-gradient(135deg, rgba(15, 14, 23, 0.7), rgba(106, 143, 155, 0.7));
   color: #fff;
   box-sizing: border-box; 
   flex-direction: column;
@@ -63,6 +63,130 @@
   to {
     transform: scale(1);
     opacity: 1;
+  }
+}
+
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 25px;
+  font-size: 1rem;
+  background: #18d4ee;
+  color: #fff;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.btn:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 20px rgba(24, 212, 238, 0.5);
+}
+
+.btn-icon {
+  font-size: 1.2rem;
+}
+
+.about-cards {
+  display: flex;
+  flex-wrap: nowrap; 
+  gap: 15px;
+  justify-content: center;
+  margin-top: 30px;
+  width: 100%;
+  overflow-x: auto; 
+  padding: 10px 0;
+}
+
+.card {
+    background: #1c293e;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
+  padding: 5px;
+  padding-left: 100px;
+  width: 200px;
+  height: 200px;
+  text-align: left;
+  color: #fff;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+  flex: 0 0 auto; 
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(24, 212, 238, 0.4);
+}
+
+.card-icon {
+  font-size: 2rem;
+  color: #18d4ee;
+  margin-bottom: 10px;
+}
+
+.card h3 {
+  font-size: 1.3rem;
+  margin-bottom: 8px;
+  color: #18d4ee;
+}
+
+.card p {
+  font-size: 0.95rem;
+  line-height: 1.5;
+  color: #d4d4d4;
+}
+.fly-animation {
+  position: relative;
+  width: 60px;
+  height: 60px;
+  margin: 20px auto 0;
+  pointer-events: none;
+}
+
+.file-icon {
+  position: absolute;
+  font-size: 40px;
+  color: #18d4ee;
+  animation: flyToFolder 2s forwards;
+  left: 0;
+  top: 10px;
+  z-index: 10;
+}
+
+.folder-icon {
+  position: absolute;
+  font-size: 50px;
+  color: #0f0e17;
+  right: 0;
+  top: 0;
+  opacity: 0.7;
+}
+
+/* Animation: file moves from left to right and shrinks */
+@keyframes flyToFolder {
+  0% {
+    transform: translateX(0) scale(1) rotate(0deg);
+    opacity: 1;
+  }
+  70% {
+    transform: translateX(50px) scale(0.7) rotate(20deg);
+    opacity: 1;
+  }
+  100% {
+    transform: translateX(60px) scale(0) rotate(45deg);
+    opacity: 0;
+  }
+}
+
+
+
+@media (max-width: 768px) {
+  .about-cards {
+    flex-direction: column;
+    align-items: center;
   }
 }
 

@@ -1,6 +1,6 @@
 .contact { 
   padding: 60px 10%;
-  background: linear-gradient(135deg, #0f0e17, #6a8f9b);
+ background: linear-gradient(135deg, rgba(15, 14, 23, 0.7), rgba(106, 143, 155, 0.7));
   text-align: center;
 }
 

@@ -1,151 +1,151 @@
-
 .projects-container {
-  background: linear-gradient(135deg, #0f0e17, #6a8f9b);
+  background: linear-gradient(135deg, rgba(15, 14, 23, 0.7), rgba(106, 143, 155, 0.7));
   color: #fff;
-  padding: 40px;
+  padding: 80px 80px;
   font-family: 'Arial', sans-serif;
-  height: 50%; 
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
+  /* min-height: 100vh; */
 }
 
 .projects-title {
   text-align: center;
-  font-size: 2.5em;
+  font-size: 2em;
   color: #18d4ee;
-  margin-bottom: 40px;
+  margin-bottom: 30px;
 }
 
-
-.projects-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+.projects-layout {
+  display: flex;
+  flex-wrap: wrap;
   gap: 20px;
-  justify-items: center;
-  width: 100%;
-  max-width: 1200px; 
-  margin: 0 auto;
 }
 
-.project-card {
-  background-color: #2c3e50;
-  border-radius: 8px;
-  overflow: hidden;
-  width: 100%;
-  height: 400px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+.projects-sidebar {
+  flex: 1;
+  min-width: 200px;
   display: flex;
   flex-direction: column;
+  gap: 10px;
 }
 
-.card-header {
-  display: flex;
-  justify-content: space-between;
-  padding: 15px;
-  background-color: #18d4ee;
+.category-button {
+  background-color: #2c3e50;
+  border: none;
+  padding: 12px 15px;
   color: #fff;
-  border-radius: 8px 8px 0 0;
-}
-
-.card-title {
-  font-size: 1.5em;
+  text-align: left;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
   font-weight: bold;
 }
 
+.category-button:hover,
+.category-button.active {
+  background-color: #18d4ee;
+}
+
+.projects-content {
+  flex: 3;
+  min-width: 300px;
+  background-color: #2c3e50;
+  padding: 20px;
+  border-radius: 8px;
+}
+
+.category-heading {
+  margin-bottom: 15px;
+  color: #18d4ee;
+}
+
 .project-list {
-  list-style-type: none;
+  list-style: none;
   padding: 0;
   margin: 0;
-  flex-grow: 1;
-  overflow-y: auto; 
 }
 
 .project-item {
-  padding: 10px;
+  padding: 10px 0;
   border-bottom: 1px solid #34495e;
+  display: flex;
+  flex-direction: column;
 }
 
 .project-item:last-child {
   border-bottom: none;
 }
 
-.project-icon {
-  margin-right: 10px;
-}
-
-
 .project-links {
+  margin-top: 5px;
   display: flex;
   gap: 10px;
-  margin-top: 10px;
 }
 
 .link-icon {
-  color: #18d4ee;
+  color: #fff;
   text-decoration: none;
   display: flex;
   align-items: center;
-  font-size: 1.1em;
-  transition: color 0.3s ease;
+  gap: 5px;
 }
 
 .link-icon:hover {
-  color: #fff;
+  text-decoration: underline;
 }
 
-.link-icon svg {
-  margin-right: 5px;
-}
-
-
-.toggle-button {
-  background-color: #2c3e50; 
-  color: #fff;
-  border: none;
-  padding: 10px 20px;
-  cursor: pointer;
-  border-radius: 50px; 
-  font-size: 1.1em;
-  transition: background-color 0.3s ease, transform 0.3s ease; 
-}
-
-.toggle-button:hover {
-  background-color: #18d4ee; 
-  transform: scale(1.1); 
-}
-
-
-.toggle-button:active {
-  transform: scale(1); 
-}
-
-
-
-@media screen and (max-width: 768px) {
-  .projects-title {
-    font-size: 2em;
+@media (max-width: 768px) {
+  .projects-layout {
+    flex-direction: column;
   }
 
-  .projects-grid {
-    grid-template-columns: repeat(auto-fill, min(250px, 1fr)); 
+  .projects-sidebar {
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
   }
 
-  .project-card {
-    height: auto; 
+  .category-button {
+    flex: 1 1 auto;
+    text-align: center;
+  }
+
+  .projects-content {
+    width: 100%;
+  }
+}
+/* Fade + scale animation for cards on load */
+@keyframes fadeScaleIn {
+  0% {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
   }
 }
 
-@media screen and (max-width: 480px) {
-  .projects-title {
-    font-size: 1.8em;
-  }
+.project-card {
+  background-color: #fff;
+  border-radius: 1rem;
+  padding: 1.5rem;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+  min-height: 280px;
+  /* Animation on mount */
+  animation: fadeScaleIn 0.5s ease forwards;
+  /* Smooth transition on hover and expand */
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+  transform-origin: center;
+}
 
-  .project-card {
-    height: auto;
-  }
+/* Slight scale up on hover */
+.project-card:hover {
+  transform: scale(1.03);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
+}
 
-  .project-list {
-    padding: 10px;
-  }
+/* Scale and shadow increase on expand */
+.project-card.expanded {
+  transform: scale(1.05);
+  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25);
 }

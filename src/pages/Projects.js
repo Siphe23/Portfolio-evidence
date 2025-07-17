@@ -1,13 +1,9 @@
 import React, { useState } from 'react';
-import { FaGithub, FaExternalLinkAlt } from 'react-icons/fa'; 
+import { FaGithub, FaExternalLinkAlt } from 'react-icons/fa';
 import '../styling/Projects.css';
 
 function Projects() {
-  const [expandedCategory, setExpandedCategory] = useState(null);
-
-  const toggleCategory = (category) => {
-    setExpandedCategory(expandedCategory === category ? null : category);
-  };
+  const [selectedCategory, setSelectedCategory] = useState('UI Challenges');
 
   const projectsData = [
     {
@@ -127,55 +123,58 @@ function Projects() {
     },
   ];
 
+  const selectedProjects = projectsData.find(
+    (category) => category.category === selectedCategory
+  );
+
   return (
     <div className="projects-container">
       <h1 className="projects-title">My Projects</h1>
-      <div className="projects-grid">
-        {projectsData.map((category) => (
-          <div key={category.category} className="project-card">
-            <div className="card-header">
-              <h2 className="card-title">{category.category}</h2>
-              <button
-                className="toggle-button"
-                onClick={() => toggleCategory(category.category)}
-              >
-                {expandedCategory === category.category ? 'Less' : 'More'}
-              </button>
-            </div>
-            <ul className="project-list">
-              {(expandedCategory === category.category
-                ? category.projects
-                : category.projects.slice(0, 3)
-              ).map((project, index) => (
-                <li key={index} className="project-item">
-                  <span className="project-icon">🔹</span> {project.name}
-                  <div className="project-links">
-                    <a
-                      href={project.github}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="link-icon"
-                    >
-                      <FaGithub /> GitHub
-                    </a>
-                    <a
-                      href={project.deployed}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="link-icon"
-                    >
-                      <FaExternalLinkAlt /> Live Demo
-                    </a>
-                  </div>
-                </li>
-              ))}
-            </ul>
-          </div>
-        ))}
+      <div className="projects-layout">
+        <div className="projects-sidebar">
+          {projectsData.map((category) => (
+            <button
+              key={category.category}
+              className={`category-button ${
+                selectedCategory === category.category ? 'active' : ''
+              }`}
+              onClick={() => setSelectedCategory(category.category)}
+            >
+              {category.category}
+            </button>
+          ))}
+        </div>
+        <div className="projects-content">
+          <h2 className="category-heading">{selectedCategory}</h2>
+          <ul className="project-list">
+            {selectedProjects.projects.map((project, index) => (
+              <li key={index} className="project-item">
+                <span className="project-icon">🔹</span> {project.name}
+                <div className="project-links">
+                  <a
+                    href={project.github}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="link-icon"
+                  >
+                    <FaGithub /> GitHub
+                  </a>
+                  <a
+                    href={project.deployed}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="link-icon"
+                  >
+                    <FaExternalLinkAlt /> Live Demo
+                  </a>
+                </div>
+              </li>
+            ))}
+          </ul>
+        </div>
       </div>
     </div>
   );
 }
 
 export default Projects;
-
