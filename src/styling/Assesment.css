@@ -1,14 +1,20 @@
+/* Assessments Section */
 .assessments {
-    padding: 50px 10%;
+    padding: 40px 5%;
     background: linear-gradient(135deg, #0f0e17, #6a8f9b);
     color: white;
     text-align: center;
+    width: 100%;
+    box-sizing: border-box;
 }
 
+/* Headings */
 .assessments h2, .assessments h3, .assessments h4 {
     color: #18d4ee;
+    margin-bottom: 15px;
 }
 
+/* Responsive Table */
 .assessments table {
     width: 100%;
     margin-top: 20px;
@@ -19,6 +25,7 @@
     overflow: hidden;
 }
 
+/* Table Styling */
 .assessments th, .assessments td {
     padding: 15px;
     border: 1px solid #333;
@@ -30,11 +37,19 @@
     color: black;
 }
 
+/* Ensure Table Scrolls on Mobile */
+.assessments .table-container {
+    width: 100%;
+    overflow-x: auto;
+}
+
+/* Links */
 .assessments a {
     color: #18d4ee;
     text-decoration: none;
 }
 
+/* Lists */
 .assessments ul {
     list-style: none;
     padding: 0;
@@ -45,4 +60,34 @@
     padding: 10px;
     margin: 10px 0;
     border-radius: 5px;
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+    .assessments {
+        padding: 30px 3%;
+    }
+
+    .assessments h2 {
+        font-size: 1.8rem;
+    }
+
+    .assessments .table-container {
+        overflow-x: auto; /* Enable horizontal scroll */
+    }
+
+    .assessments table {
+        width: 100%;
+        min-width: 600px; /* Prevent table from squishing */
+    }
+
+    .assessments th, .assessments td {
+        padding: 10px;
+        font-size: 0.9rem;
+    }
+
+    .assessments li {
+        font-size: 1rem;
+        padding: 8px;
+    }
 }
