@@ -1,11 +1,12 @@
 import React from 'react'; 
-import { motion } from 'framer-motion'; // Importing framer-motion for animation
+import { motion } from 'framer-motion'; 
 import "../styling/Collabs.css";
 
 function Collabs() {
     return (
         <div className="collabs">
-            <h1><span>Collabs</span> Work:</h1>
+            <h1><span>Collabs</span> <span class="work">Work</span>:</h1>
+
             <section className="collabs-container">
                 <motion.div
                     className="collab-card"

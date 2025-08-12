@@ -1,7 +1,7 @@
 import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faHtml5, faCss3Alt, faJs, faReact, faNodeJs } from '@fortawesome/free-brands-svg-icons';
-import { faDatabase, faFire } from '@fortawesome/free-solid-svg-icons'; // Add Firebase and MongoDB icons
+import { faDatabase, faFire } from '@fortawesome/free-solid-svg-icons'; 
 import '../styling/Skills.css';
 
 const Skills = () => {

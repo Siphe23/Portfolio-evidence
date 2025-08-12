@@ -1,10 +1,8 @@
-
-.collabs {
+.collabs { 
     text-align: center;
     padding: 50px 20px;
-    background-color: #f4f4f4;
+   background: linear-gradient(135deg, rgba(15, 14, 23, 0.7), rgba(106, 143, 155, 0.7));
 }
-
 
 .collabs h1 {
     font-size: 36px;
@@ -18,6 +16,10 @@
     color: #18d4ee;
 }
 
+.collabs h1 .work {
+    color: #fff; 
+}
+
 
 .collabs-container {
     display: flex;
@@ -27,9 +29,8 @@
     margin: 0 auto;
 }
 
-
 .collab-card {
-    background-color: #fff;
+    background-color: #121d27;
     border-radius: 8px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
     padding: 20px;
@@ -37,7 +38,6 @@
     display: flex;
     flex-direction: column;
 }
-
 
 .collab-card:hover {
     transform: translateY(-5px);
@@ -59,14 +59,12 @@
     margin: 0;
 }
 
-
 .collab-content {
     text-align: left;
     font-size: 16px;
-    color: #555;
+    color: #18d4ee;
     line-height: 1.6;
 }
-
 
 .collab-content ul {
     padding-left: 20px;
@@ -75,7 +73,6 @@
 .collab-content ul li {
     margin-bottom: 5px;
 }
-
 
 .collab-content a {
     color: #18d4ee;
@@ -97,9 +94,62 @@
 }
 
 
-@media (max-width: 768px) {
+@media (max-width: 1080px) {
+    .collabs {
+        padding: 30px 15px;
+    }
+
+    .collabs h1 {
+        font-size: 30px;
+    }
+
     .collabs-container {
+        gap: 15px;
+        max-width: 100%;
+    }
+
+    .collab-card {
+        padding: 15px;
+    }
+
+    .collab-header h2 {
+        font-size: 20px;
+    }
+
+    .collab-content {
+        font-size: 14px;
+    }
+}
+
+
+@media (max-width: 768px) {
+    .collabs {
+        padding: 20px 10px;
+    }
+
+    .collabs h1 {
+        font-size: 24px;
+    }
+
+    .collabs-container {
+        gap: 10px;
+        max-width: 100%;
+    }
+
+    .collab-card {
+        padding: 10px;
+    }
+
+    .collab-header {
         flex-direction: column;
-        align-items: center;
+        align-items: flex-start;
+    }
+
+    .collab-header h2 {
+        font-size: 18px;
+    }
+
+    .collab-content {
+        font-size: 13px;
     }
 }

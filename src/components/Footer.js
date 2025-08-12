@@ -1,5 +1,5 @@
 import React from 'react';
-import { FaTwitter, FaLinkedin, FaGithub } from 'react-icons/fa'; // Import icons
+import { FaTwitter, FaLinkedin, FaGithub } from 'react-icons/fa'; 
 import '../styling/Footer.css';
 
 function Footer() {
@@ -7,7 +7,7 @@ function Footer() {
     <footer className="footer">
       <div className="container">
         <p>© {new Date().getFullYear()} Portfolio by Nasiphi Ndzumo</p>
-        Last update: 06/02/2025
+        Last update: 07/18/2025
         <div className="social-icons">
           <a href="https://twitter.com" target="_blank" rel="noopener noreferrer">
             <FaTwitter style={{ marginRight: '10px', fontSize: '20px' }} />
