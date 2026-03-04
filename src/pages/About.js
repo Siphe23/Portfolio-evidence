@@ -5,7 +5,6 @@ import {
   FaCode, 
   FaBriefcase, 
   FaGraduationCap, 
-  FaDownload, 
   FaFileAlt, 
   FaFolderOpen 
 } from "react-icons/fa";
@@ -13,23 +12,7 @@ import {
 const About = () => {
   const [isAnimating, setIsAnimating] = useState(false);
 
-  const downloadCV = () => {
-    if (isAnimating) return;
-
-    setIsAnimating(true);
-
-    
-    const link = document.createElement("a");
-    link.href = "/CV/Nasiphi Siphesihle resume (1).pdf";
-    link.download = "Nasiphi Siphesihle CV.pdf";
-    document.body.appendChild(link);
-    link.click();
-    document.body.removeChild(link);
-
-    setTimeout(() => {
-      setIsAnimating(false);
-    }, 2000);
-  };
+  
 
   return (
     <section className="about">
@@ -81,9 +64,7 @@ const About = () => {
           </p>
         </div>
       </div>
-         <button className="btn" onClick={downloadCV} disabled={isAnimating}>
-            <FaDownload className="btn-icon" /> Download CV
-          </button>
+         
     </section>
     
   );
