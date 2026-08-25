@@ -2,7 +2,7 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { FaPhoneAlt, FaEnvelope } from 'react-icons/fa';
 import '../styling/Home.css';
-import nasiphiImg from "../nasiphi.png.png";
+import nasiphiImg from '../nasiphi.png.png';
 
 function Home() {
   return (
@@ -14,17 +14,22 @@ function Home() {
     >
       <div className="intro">
         <h2>Hello, It's Me</h2>
-        <h1><span>N</span>asiphi Ndz<span>umo</span></h1>
+
+        <h1>
+          <span>N</span>asiphi Ndz<span>umo</span>
+        </h1>
 
         <p>
-          I’m a proud <strong className="mlab-highlight">MLab Graduate</strong> (March 2025) and a 
-          <strong> Certificate Holder</strong> from the 
-          <strong> FNB App of the Year Awards</strong>.
+          I’m a proud{' '}
+          <strong className="mlab-highlight">MLab Graduate</strong>{' '}
+          (March 2025) and a{' '}
+          <strong>Certificate Holder</strong> from the{' '}
+          <strong>FNB App of the Year Awards</strong>.
         </p>
 
         <p>
-          I’m a <strong>Web Developer</strong> passionate about crafting clean, efficient, 
-          and beautiful digital experiences.
+          I’m a <strong>Web Developer</strong> passionate about
+          crafting clean, efficient, and beautiful digital experiences.
         </p>
 
         <div className="contact-info">
@@ -32,6 +37,7 @@ function Home() {
             <FaPhoneAlt className="icon" />
             <span>060 757 0454</span>
           </p>
+
           <p>
             <FaEnvelope className="icon" />
             <span>siphesihlemzamane@gmail.com</span>
@@ -44,9 +50,9 @@ function Home() {
             <button className="btn">Hire Me</button>
           </a>
 
-          {/* View CV opens in new tab before download */}
+          {/* View CV opens the PDF in a new tab */}
           <a
-            href="/Nasiphi_Siphesihle_NdzumoCV"
+            href="/Nasiphi_Siphesihle_NdzumoCV.pdf"
             target="_blank"
             rel="noopener noreferrer"
           >
