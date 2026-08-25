@@ -46,7 +46,7 @@ function Home() {
 
           {/* View CV opens in new tab before download */}
           <a
-            href="/Nasiphi Siphesihle Ndzumocv.pdf"
+            href="/Nasiphi_Siphesihle_NdzumoCV"
             target="_blank"
             rel="noopener noreferrer"
           >
