@@ -22,9 +22,8 @@ function Home() {
         <p>
           I’m a proud{' '}
           <strong className="mlab-highlight">MLab Graduate</strong>{' '}
-          (March 2025) and a{' '}
-          <strong>Certificate Holder</strong> from the{' '}
-          <strong>FNB App of the Year Awards</strong>.
+          (March 2025) 
+        
         </p>
 
         <p>
@@ -40,7 +39,7 @@ function Home() {
 
           <p>
             <FaEnvelope className="icon" />
-            <span>siphesihlemzamane@gmail.com</span>
+            <span>nasiphisiphesihlendzumo@gmail.com</span>
           </p>
         </div>
 

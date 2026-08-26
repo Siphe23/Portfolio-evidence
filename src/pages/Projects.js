@@ -14,39 +14,35 @@ function Projects() {
       ],
     },
     {
+      category: 'Web Development',
+      projects: [
+        { name: 'OIBSIP', language: 'HTML/CSS/JS', github: 'https://github.com/Siphe23/OIBSIP', deployed: 'https://siphe23.github.io/OIBSIP' },
+        { name: 'EARCO', language: 'CSS', github: 'https://github.com/Siphe23/EARCO', deployed: 'https://siphe23.github.io/EARCO' },
+      ],
+    },
+    {
+      category: 'JavaScript Projects',
+      projects: [
+        { name: 'Age Calculator', language: 'JavaScript', github: 'https://github.com/yourusername/age-calculator', deployed: 'https://yourusername.github.io/age-calculator' },
+      ],
+    },
+    {
       category: 'React.js',
       projects: [
-        { name: 'Age Calculator', github: 'https://github.com/yourusername/age-calculator', deployed: 'https://yourusername.github.io/age-calculator' },
-        { name: 'Employee App', github: 'https://github.com/yourusername/employee-app', deployed: 'https://yourusername.github.io/employee-app' },
-        { name: 'To-Do List App', github: 'https://github.com/yourusername/to-do-list-app', deployed: 'https://yourusername.github.io/to-do-list-app' },
-        { name: 'Shopping List App', github: 'https://github.com/yourusername/shopping-list-app', deployed: 'https://yourusername.github.io/shopping-list-app' },
-        { name: 'Weather App', github: 'https://github.com/yourusername/weather-app', deployed: 'https://yourusername.github.io/weather-app' },
-        { name: 'Recipe App', github: 'https://github.com/yourusername/recipe-app', deployed: 'https://yourusername.github.io/recipe-app' },
-      ],
-    },
-    {
-      category: 'Node.js',
-      projects: [
-        { name: 'Server.js', github: 'https://github.com/yourusername/server-js', deployed: 'https://yourusername.github.io/server-js' },
-        { name: 'Shopping Node.js', github: 'https://github.com/yourusername/shopping-nodejs', deployed: 'https://yourusername.github.io/shopping-nodejs' },
-        { name: 'Quiz App', github: 'https://github.com/yourusername/quiz-app', deployed: 'https://yourusername.github.io/quiz-app' },
-        { name: 'Memory Game', github: 'https://github.com/yourusername/memory-game', deployed: 'https://yourusername.github.io/memory-game' },
-      ],
-    },
-    {
-      category: 'MERN Stack',
-      projects: [
-        { name: 'Hotel App', github: 'https://github.com/yourusername/hotel-app', deployed: 'https://yourusername.github.io/hotel-app' },
+        { name: 'weather-app', language: 'React JS', github: 'https://github.com/Siphe23/weather-app', deployed: 'https://siphe23.github.io/weather-app' },
+        { name: 'SafeSpaceSA', language: 'React JS', github: 'https://github.com/Siphe23/SafeSpaceSA', deployed: 'https://siphe23.github.io/SafeSpaceSA' },
+        { name: 'Aktive60-web', language: 'JavaScript', note: 'Collaboration', github: 'https://github.com/Siphe23/Aktive60-web', deployed: 'https://siphe23.github.io/Aktive60-web' },
       ],
     },
     {
       category: 'React Native',
       projects: [
-        { name: 'Birthday Card', github: 'https://github.com/yourusername/birthday-card', deployed: 'https://yourusername.github.io/birthday-card' },
-        { name: 'Audio Recording App', github: 'https://github.com/yourusername/audio-recording', deployed: 'https://yourusername.github.io/audio-recording' },
-        { name: 'Payment Gateway', github: 'https://github.com/yourusername/payment-gateway', deployed: 'https://yourusername.github.io/payment-gateway' },
-        { name: 'Gallery App', github: 'https://github.com/yourusername/gallery-app', deployed: 'https://yourusername.github.io/gallery-app' },
-        { name: 'Shopping List App', github: 'https://github.com/yourusername/shopping-list-app-react-native', deployed: 'https://yourusername.github.io/shopping-list-app-react-native' },
+        { name: 'RideApp', language: 'React Native', github: 'https://github.com/Siphe23/RideApp', deployed: 'https://siphe23.github.io/RideApp' },
+        { name: 'AudioRecordingApp-Native', language: 'React Native', github: 'https://github.com/Siphe23/AudioRecordingApp-Native', deployed: 'https://siphe23.github.io/AudioRecordingApp-Native' },
+        { name: 'Birthday-react-native', language: 'React Native', github: 'https://github.com/Siphe23/Birthday-react-native', deployed: 'https://siphe23.github.io/Birthday-react-native' },
+        { name: 'synthstage-ai', language: 'React Native', github: 'https://github.com/Siphe23/synthstage-ai', deployed: 'https://siphe23.github.io/synthstage-ai' },
+        { name: 'GLOUDGLOBEAI', language: 'React Native', github: 'https://github.com/Siphe23/GLOUDGLOBEAI', deployed: 'https://siphe23.github.io/GLOUDGLOBEAI' },
+        { name: 'Voice Login App', language: 'React Native', github: 'https://github.com/Siphe23/VoiceLoginApp', deployed: 'https://siphe23.github.io/VoiceLoginApp' },
       ],
     },
   ];
@@ -71,20 +67,31 @@ function Projects() {
           ))}
         </div>
         <div className="projects-content">
-          <h2 className="category-heading">
+          <h2 className="category-heading" key={selectedCategory}>
             {selectedProjects.projects.length} project{selectedProjects.projects.length !== 1 ? 's' : ''}
           </h2>
-          <ul className="project-list">
+          <ul className="project-list" key={`${selectedCategory}-list`}>
             {selectedProjects.projects.map((project, index) => (
-              <li key={index} className="project-item">
-                <span className="project-name">{project.name}</span>
+              <li key={index} className="project-item" style={{ animationDelay: `${Math.min(index, 10) * 0.06}s` }}>
+                <div className="project-card-header">
+                  <span className="project-name">{project.name}</span>
+                  {project.note && <span className="project-note">{project.note}</span>}
+                </div>
+                {project.language && (
+                  <span className="project-language-badge">
+                    <span className="language-dot" />
+                    {project.language}
+                  </span>
+                )}
                 <div className="project-links">
                   <a href={project.github} target="_blank" rel="noopener noreferrer" className="link-icon">
                     <FaGithub /> GitHub
                   </a>
-                  <a href={project.deployed} target="_blank" rel="noopener noreferrer" className="link-icon">
-                    <FaExternalLinkAlt /> Live Demo
-                  </a>
+                  {project.deployed && (
+                    <a href={project.deployed} target="_blank" rel="noopener noreferrer" className="link-icon link-icon-primary">
+                      <FaExternalLinkAlt /> Live Demo
+                    </a>
+                  )}
                 </div>
               </li>
             ))}

@@ -7,7 +7,7 @@ function Footer() {
     <footer className="footer">
       <div className="container">
         <p>© {new Date().getFullYear()} Portfolio by Nasiphi Ndzumo</p>
-        Last update: 04/03/2026
+        Last update: 26/08/2026
 
         {/* Footer navigation links */}
         <div className="footer-links">
