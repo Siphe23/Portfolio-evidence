@@ -9,27 +9,27 @@ function Projects() {
     {
       category: 'UI Challenges',
       projects: [
-        { name: 'Scan code', github: 'https://github.com/yourusername/scan-code', deployed: 'https://yourusername.github.io/scan-code' },
-        { name: 'Intro Section with Dropdown Navigation', github: 'https://github.com/yourusername/intro-dropdown', deployed: 'https://yourusername.github.io/intro-dropdown' },
+        { name: 'Scan code', github: 'https://github.com/Siphe23/Scan-bar-code.git', deployed: 'https://scan-bar-code.vercel.app' },
+        { name: 'Intro Section with Dropdown Navigation', github: 'https://github.com/Siphe23/intro-dropdown', deployed: 'https://siphe23.github.io/intro-dropdown' },
       ],
     },
     {
       category: 'Web Development',
       projects: [
         { name: 'OIBSIP', language: 'HTML/CSS/JS', github: 'https://github.com/Siphe23/OIBSIP', deployed: 'https://siphe23.github.io/OIBSIP' },
-        { name: 'EARCO', language: 'CSS', github: 'https://github.com/Siphe23/EARCO', deployed: 'https://siphe23.github.io/EARCO' },
+        { name: 'EARCO', language: 'CSS', github: 'https://github.com/Siphe23/EARCO', deployed: 'https://earco.vercel.app/' },
       ],
     },
     {
       category: 'JavaScript Projects',
       projects: [
-        { name: 'Age Calculator', language: 'JavaScript', github: 'https://github.com/yourusername/age-calculator', deployed: 'https://yourusername.github.io/age-calculator' },
+        { name: 'Age Calculator', language: 'JavaScript', github: 'https://github.com/Siphe23/age-form-app.git', deployed: 'https://age-form-app.vercel.app/' },
       ],
     },
     {
       category: 'React.js',
       projects: [
-        { name: 'weather-app', language: 'React JS', github: 'https://github.com/Siphe23/weather-app', deployed: 'https://siphe23.github.io/weather-app' },
+        { name: 'weather-app', language: 'React JS', github: 'https://github.com/Siphe23/weather-app', deployed: 'https://weather-app-beta-gray.vercel.app/' },
         { name: 'SafeSpaceSA', language: 'React JS', github: 'https://github.com/Siphe23/SafeSpaceSA', deployed: 'https://siphe23.github.io/SafeSpaceSA' },
         { name: 'Aktive60-web', language: 'JavaScript', note: 'Collaboration', github: 'https://github.com/Siphe23/Aktive60-web', deployed: 'https://siphe23.github.io/Aktive60-web' },
       ],
