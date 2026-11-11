@@ -8,7 +8,7 @@ function Footer() {
       <div className="container">
         <div className="footer-info">
           <p>© {new Date().getFullYear()} Portfolio by Nasiphi Ndzumo</p>
-          <p className="last-update">Last update: 26/08/2026</p>
+          <p className="last-update">Last update: 11/11/2026</p>
         </div>
 
         {/* Footer navigation links */}

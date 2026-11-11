@@ -18,15 +18,17 @@ const Skills = () => {
   ];
 
   return (
-    <div className="skills">
-      <h2>My Skills</h2>
+    <div className="skills" id="skills">
+      <h2>My <span>Skills</span></h2>
       <div className="skills-container">
         {skills.map((skill) => (
           <div className="skill-card" key={skill.id}>
-            <FontAwesomeIcon icon={skill.icon} size="3x" />
+            <div className="skill-icon-wrapper">
+              <FontAwesomeIcon icon={skill.icon} size="2x" />
+            </div>
             <h3>{skill.name}</h3>
-            <p><strong>Proficiency:</strong> {skill.proficiency}</p>
-            <p><strong>Notes/Examples:</strong> {skill.notes}</p>
+            <span className="proficiency-badge">{skill.proficiency}</span>
+            <p>{skill.notes}</p>
           </div>
         ))}
       </div>

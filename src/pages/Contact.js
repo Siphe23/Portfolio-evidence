@@ -66,19 +66,19 @@ function Contact() {
             <p>Let's build something meaningful together.</p>
             
             <div className="social-links">
-              <a href="https://github.com/yourusername" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+              <a href="https://github.com/Siphe23" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
                 <FaGithub />
               </a>
-              <a href="https://linkedin.com/in/yourusername" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+              <a href="https://linkedin.com/in/nasiphindzumo" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
                 <FaLinkedin />
               </a>
-              <a href="mailto:siphesihlemzamane@gmail.com" aria-label="Email">
+              <a href="mailto:nasiphisiphesihlendzumo@gmail.com" aria-label="Email">
                 <FaEnvelope />
               </a>
             </div>
 
             <div className="direct-contact">
-              <p><strong>Email:</strong> siphesihlemzamane@gmail.com</p>
+              <p><strong>Email:</strong> nasiphisiphesihlendzumo@gmail.com</p>
               <p><strong>Phone:</strong> 060 757 0454</p>
             </div>
           </motion.div>

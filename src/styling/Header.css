@@ -1,13 +1,14 @@
 .header {
-  background: linear-gradient(135deg, rgba(15, 14, 23, 0.9), rgba(106, 143, 155, 0.9));
+  background: linear-gradient(135deg, rgba(15, 14, 23, 0.95), rgba(26, 28, 41, 0.95));
   color: #fff;
-  height: 84px;
-  padding: 0 10%;
+  height: 80px;
+  padding: 0 8%;
   display: flex;
   align-items: center;
   position: sticky;
   top: 0;
   z-index: 1000;
+  border-bottom: 1px solid rgba(24, 212, 238, 0.1);
 }
 
 .container {
@@ -19,9 +20,10 @@
 }
 
 .logo { 
-  font-size: 1.8rem;
+  font-size: 1.6rem;
   font-weight: bold;
   color: #fff; 
+  margin: 0;
 }
 
 .logo span {
@@ -29,17 +31,18 @@
 }
 
 .nav-links {
-  
   list-style: none;
   display: flex;
   gap: 25px;
   margin: 0;
+  padding: 0;
 }
 
 .nav-links li a {
   color: #fff;
   text-decoration: none;
   font-size: 1rem;
+  font-weight: 500;
   display: flex;
   align-items: center;
   gap: 8px;
@@ -50,75 +53,81 @@
   color: #18d4ee;
 }
 
+/* Hamburger Icon */
 .hamburger {
   display: none;
   cursor: pointer;
   font-size: 1.8rem;
   color: #fff;
   z-index: 1100;
-  transition: transform 0.3s ease-in-out;
+  transition: color 0.3s ease;
 }
 
-.icon {
-  display: inline-block;
-  vertical-align: middle;
-   color: #18d4ee;
+.hamburger:hover {
+  color: #18d4ee;
 }
 
-/* Tablet */
+/* --- TABLET --- */
 @media (max-width: 1080px) {
-  .logo { font-size: 1.6rem; }
+  .logo { font-size: 1.5rem; }
   .nav-links { gap: 15px; }
   .nav-links li a { font-size: 0.95rem; }
 }
 
-/* Mobile */
+/* --- MOBILE --- */
 @media (max-width: 768px) {
+  .header { padding: 0 5%; }
+
   .hamburger {
     display: block;
-    position: absolute;
-    top: 25px;
-    right: 25px;
   }
 
-.nav-links {
-  flex-direction: column;
-  gap: 15px;
-  position: fixed;
-  top: 0;
-  right: -250px;
-  height: 100vh;
-  width: 200px;
+  .nav-links {
+    flex-direction: column;
+    gap: 20px;
+    position: fixed;
+    top: 0;
+    right: -100%; /* Hidden by default */
+    height: 100vh;
+    width: 260px; /* Slightly wider for better tap targets */
+    
+    /* Solid dark background with blur */
+    background: rgba(15, 14, 23, 0.95);
+    backdrop-filter: blur(10px);
+    border-left: 1px solid rgba(24, 212, 238, 0.2);
+    
+    padding: 100px 30px 40px 30px; /* Space for the X icon at the top */
+    transition: right 0.4s cubic-bezier(0.77, 0, 0.175, 1);
+    z-index: 1050;
+    box-shadow: -10px 0 30px rgba(0, 0, 0, 0.5);
+  }
 
-  /* Transparent dark overlay */
-  background: rgba(15, 14, 23, 0.6);
-
-  padding: 80px 20px;
-  transition: right 0.3s ease;
-  z-index: 1000;
-}
-
-/* Make text readable on transparent background */
-.nav-links li a {
-  color: #ffffff;
-}
-
-.nav-links li a:hover {
-  color: #18d4ee;
-}
   .nav-links.active {
     right: 0;
   }
 
+  .nav-links li {
+    width: 100%;
+  }
+
   .nav-links li a {
-    font-size: 1rem;
-    padding: 10px 0;
+    font-size: 1.1rem;
+    padding: 12px 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    display: block;
+    width: 100%;
+  }
+  
+  .nav-links li a:hover {
+    color: #18d4ee;
+    padding-left: 5px; /* Small slide effect on hover */
+    transition: all 0.3s ease;
   }
 }
 
-/* Small screen adjustments */
+/* --- SMALL PHONES --- */
 @media (max-width: 480px) {
-  .header { padding: 0 5%; }
-  .logo { font-size: 1.4rem; }
-  .nav-links li a { font-size: 0.9rem; }
+  .header { padding: 0 4%; }
+  .logo { font-size: 1.3rem; }
+  .nav-links { width: 220px; }
 }

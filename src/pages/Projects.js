@@ -52,9 +52,14 @@ function Projects() {
   );
 
   return (
-    <div className="projects-container">
-      <h1 className="projects-title">My Projects</h1>
+    <div className="projects-container" id="projects">
+      <div className="projects-header">
+        <h1 className="projects-title">My <span>Projects</span></h1>
+        <p className="projects-subtitle">A showcase of my recent work and coding challenges.</p>
+      </div>
+
       <div className="projects-layout">
+        {/* Sidebar for Categories */}
         <div className="projects-sidebar">
           {projectsData.map((category) => (
             <button
@@ -66,26 +71,32 @@ function Projects() {
             </button>
           ))}
         </div>
+
+        {/* Project Content */}
         <div className="projects-content">
           <h2 className="category-heading" key={selectedCategory}>
-            {selectedProjects.projects.length} project{selectedProjects.projects.length !== 1 ? 's' : ''}
+            {selectedProjects.projects.length} project{selectedProjects.projects.length !== 1 ? 's' : ''} in {selectedCategory}
           </h2>
+          
           <ul className="project-list" key={`${selectedCategory}-list`}>
             {selectedProjects.projects.map((project, index) => (
               <li key={index} className="project-item" style={{ animationDelay: `${Math.min(index, 10) * 0.06}s` }}>
+                
                 <div className="project-card-header">
                   <span className="project-name">{project.name}</span>
                   {project.note && <span className="project-note">{project.note}</span>}
                 </div>
+
                 {project.language && (
                   <span className="project-language-badge">
                     <span className="language-dot" />
                     {project.language}
                   </span>
                 )}
+
                 <div className="project-links">
                   <a href={project.github} target="_blank" rel="noopener noreferrer" className="link-icon">
-                    <FaGithub /> GitHub
+                    <FaGithub /> Code
                   </a>
                   {project.deployed && (
                     <a href={project.deployed} target="_blank" rel="noopener noreferrer" className="link-icon link-icon-primary">

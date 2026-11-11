@@ -1,5 +1,5 @@
-import React from "react"; 
-import "../styling/About.css";
+import React from 'react'; 
+import '../styling/About.css';
 import nasiphiImg from "../nasiphi.png.png"; 
 import { FaCode, FaBriefcase, FaGraduationCap } from "react-icons/fa";
 
@@ -7,16 +7,18 @@ const About = () => {
   return (
     <section className="about">
       <div className="about-content">
-        <div className="about-text">
-          <h2>About Me</h2>
-          <p>
-            Hi, I'm Nasiphi Ndzumo, a web developer passionate about crafting responsive, user-friendly apps.
-          </p>
-        </div>
-
+        
         <div className="about-image">
           <img src={nasiphiImg} alt="Nasiphi Ndzumo" />
         </div>
+
+        <div className="about-text">
+          <h2>About <span>Me</span></h2>
+          <p>
+            Hi, I'm <strong>Nasiphi Ndzumo</strong>, a web developer passionate about crafting responsive, user-friendly apps. I love turning complex problems into elegant, simple solutions.
+          </p>
+        </div>
+
       </div>
 
       {/* Cards Section */}
