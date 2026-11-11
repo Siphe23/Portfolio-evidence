@@ -265,66 +265,64 @@
   border: 1px solid rgba(255, 76, 76, 0.3);
 }
 
-/* --- RESPONSIVE DESIGN --- */
-@media (max-width: 900px) {
-  .contact-wrapper {
-    padding: 50px 5%;
-    align-items: flex-start;
-  }
-  
-  .contact-content {
+/* --- UPDATED HOME RESPONSIVE DESIGN --- */
+@media (max-width: 768px) {
+  .home-top {
     flex-direction: column;
+    text-align: center;
+    gap: 30px;
+  }
+
+  .intro { max-width: 100%; }
+  .bio-text { margin: 0 auto 30px auto; }
+  
+  /* Fix Button Overlap */
+  .btn-container { 
+    flex-direction: column; 
+    justify-content: center; 
+    width: 100%; 
+    gap: 15px;
+    padding: 0 10px; /* Ensures they don't touch the screen edges */
   }
   
-  .contact-info-card {
-    padding: 25px;
+  .btn-primary, .btn-secondary { 
+    justify-content: center; 
+    width: 100%; 
+    max-width: 100%; /* Prevents overflowing */
+    padding: 14px 20px; /* Adjust padding so text fits */
+    box-sizing: border-box;
   }
   
-  .contact form {
-    padding: 25px;
+  .contact-info-inline { 
+    flex-direction: column; 
+    align-items: center; 
+    gap: 10px; 
   }
-}
-
-@media (max-width: 600px) {
-  .contact-wrapper {
-    padding: 40px 4%;
-  }
-
-  .contact-header h2 {
-    font-size: 2.2rem;
-  }
-
-  .contact-intro {
-    font-size: 0.85rem; /* Even smaller on mobile */
-  }
-
-  .contact-info-card, 
-  .contact form {
+  
+  .image-container { margin-top: 20px; }
+  .image-wrapper img { max-width: 300px; }
+  
+  .stats-bar {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 15px;
     padding: 20px;
   }
+  .stat-item { width: 100%; justify-content: flex-start; }
+}
 
-  .contact-info-card h3 {
-    font-size: 1.4rem;
-  }
-
-  .social-links a {
-    width: 42px;
-    height: 42px;
-    font-size: 1.1rem;
-  }
-
-  .contact input, 
-  .contact textarea {
-    padding: 10px 12px;
+@media (max-width: 480px) {
+  .intro h1 { font-size: 2.2rem; } /* Slightly smaller text */
+  .role-title { font-size: 0.9rem; }
+  .bio-text { font-size: 0.95rem; }
+  .availability-badge { font-size: 0.75rem; }
+  
+  /* Ensure buttons fit inside small phones */
+  .btn-primary, .btn-secondary {
     font-size: 0.9rem;
+    padding: 12px 15px;
   }
   
-  .contact textarea {
-    height: 100px;
-  }
-  
-  .submit-btn {
-    padding: 12px;
-    font-size: 0.95rem;
-  }
+  .scroll-line { width: 30px; }
+  .image-wrapper img { max-width: 250px; }
 }

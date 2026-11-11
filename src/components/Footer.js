@@ -6,8 +6,10 @@ function Footer() {
   return (
     <footer className="footer">
       <div className="container">
-        <p>© {new Date().getFullYear()} Portfolio by Nasiphi Ndzumo</p>
-        Last update: 26/08/2026
+        <div className="footer-info">
+          <p>© {new Date().getFullYear()} Portfolio by Nasiphi Ndzumo</p>
+          <p className="last-update">Last update: 26/08/2026</p>
+        </div>
 
         {/* Footer navigation links */}
         <div className="footer-links">
@@ -19,15 +21,14 @@ function Footer() {
         </div>
 
         <div className="social-icons">
-          <a href="https://twitter.com" target="_blank" rel="noopener noreferrer">
-            <FaTwitter style={{ marginRight: '10px', fontSize: '20px' }} />
+          <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" aria-label="Twitter">
+            <FaTwitter />
           </a>
-          <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer">
-            <FaLinkedin style={{ marginRight: '10px', fontSize: '20px' }} />
+          <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+            <FaLinkedin />
           </a>
-          {/* Updated GitHub link to your profile */}
-          <a href="https://github.com/Siphe23" target="_blank" rel="noopener noreferrer">
-            <FaGithub style={{ fontSize: '20px' }} />
+          <a href="https://github.com/Siphe23" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+            <FaGithub />
           </a>
         </div>
       </div>

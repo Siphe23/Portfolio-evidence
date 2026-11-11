@@ -1,43 +1,55 @@
 /* Footer Styles */
 .footer {
-  background: linear-gradient(135deg, rgba(15, 14, 23, 0.9), rgba(106, 143, 155, 0.9));
+  background: linear-gradient(135deg, rgba(15, 14, 23, 0.95), rgba(26, 28, 41, 0.95));
   color: #fff;
-  height: 84px;
-  padding: 0 10%;
+  padding: 20px 5%; /* Adjusted padding so it fits well */
   display: flex;
   align-items: center;
-  position: sticky;
-  top: 0;
-  z-index: 1000;
+  border-top: 1px solid rgba(24, 212, 238, 0.1); /* Subtle blue top border */
   box-sizing: border-box;
-}
-
-.footer p {
-  margin: 0;
-  font-size: 1rem;
+  width: 100%;
 }
 
 /* Container inside footer */
 .container {
   width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
   display: flex;
   justify-content: space-between;
   align-items: center;
   flex-wrap: wrap;
-  gap: 15px;
+  gap: 20px;
+}
+
+.footer-info {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.footer-info p {
+  margin: 0;
+  font-size: 0.9rem;
+  color: #ffffff;
+}
+
+.last-update {
+  font-size: 0.75rem !important;
+  color: #a1a1a1 !important;
 }
 
 /* Footer navigation links */
 .footer-links {
   display: flex;
-  gap: 25px;
+  gap: 20px;
   align-items: center;
 }
 
 .footer-links a {
-  color: #fff;
+  color: #ffffff;
   text-decoration: none;
-  font-size: 1rem;
+  font-size: 0.9rem;
   transition: color 0.3s ease;
 }
 
@@ -55,76 +67,66 @@
   color: #18d4ee;
   text-decoration: none;
   font-size: 1.2rem;
-  transition: color 0.3s ease;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .social-icons a:hover {
-  color: #fff;
+  color: #ffffff;
+  transform: translateY(-2px);
 }
 
-/* Responsive Footer */
-@media (max-width: 1080px) {
-  .footer {
-    padding: 20px 8%;
-  }
-  
+/* --- RESPONSIVE FOOTER --- */
+@media (max-width: 900px) {
   .container {
     flex-direction: column;
     text-align: center;
     gap: 15px;
   }
 
-  .footer p {
-    font-size: 0.9rem;
+  .footer-info {
+    align-items: center;
   }
 
   .footer-links {
     justify-content: center;
-    gap: 20px;
+    flex-wrap: wrap; /* Allows links to wrap nicely if screen is too small */
+    gap: 15px;
   }
 
   .social-icons {
     justify-content: center;
-  }
-}
-
-@media (max-width: 768px) {
-  .footer {
-    padding: 15px 5%;
-  }
-  
-  .footer p {
-    font-size: 0.85rem;
-  }
-
-  .footer-links a {
-    font-size: 0.95rem;
-  }
-
-  .social-icons a {
-    font-size: 1rem;
   }
 }
 
 @media (max-width: 600px) {
   .footer {
-    padding: 10px 5%;
+    padding: 20px 4%;
   }
-
-  .footer p {
+  
+  .footer-info p {
     font-size: 0.8rem;
   }
 
+  .last-update {
+    font-size: 0.7rem !important;
+  }
+
   .footer-links {
-    flex-direction: column;
-    gap: 10px;
+    gap: 12px;
+  }
+  
+  .footer-links a {
+    font-size: 0.8rem;
   }
 
   .social-icons {
-    gap: 10px;
+    gap: 20px; /* More space for fingers to tap */
   }
 
   .social-icons a {
-    font-size: 0.85rem;
+    font-size: 1.1rem;
   }
 }
