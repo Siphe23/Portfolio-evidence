@@ -40,7 +40,7 @@
 }
 
 .projects-title span {
-  color: #18d4ee; /* Blue accent */
+  color: #18d4ee;
 }
 
 .projects-subtitle {
@@ -68,7 +68,8 @@
   min-width: 220px;
 }
 
-.category-button {
+/* Scoped category button — won't affect buttons on other pages */
+.projects-container .category-button {
   background: rgba(26, 28, 41, 0.7);
   border: 1px solid rgba(255, 255, 255, 0.05);
   color: #a1a1a1;
@@ -80,14 +81,15 @@
   cursor: pointer;
   transition: all 0.3s ease;
   backdrop-filter: blur(10px);
+  flex-shrink: 0;
 }
 
-.category-button:hover {
+.projects-container .category-button:hover {
   border-color: rgba(24, 212, 238, 0.3);
   color: #fff;
 }
 
-.category-button.active {
+.projects-container .category-button.active {
   background: rgba(24, 212, 238, 0.1);
   border-color: #18d4ee;
   color: #18d4ee;
@@ -98,6 +100,7 @@
 /* --- CONTENT AREA --- */
 .projects-content {
   flex: 1;
+  min-width: 0;
 }
 
 .category-heading {
@@ -148,6 +151,7 @@
   font-size: 1.15rem;
   font-weight: 600;
   color: #ffffff;
+  overflow-wrap: anywhere;
 }
 
 .project-note {
@@ -223,55 +227,68 @@
 
 @media (max-width: 768px) {
   .projects-container { padding: 60px 5%; }
-  
-  /* Stack the layout on mobile */
+
   .projects-layout {
     flex-direction: column;
     gap: 25px;
   }
 
+  /* Horizontal scrollable row of pills — no overlap */
   .projects-sidebar {
-    flex-direction: row; /* Make it a horizontal scrollable list */
+    flex-direction: row;
+    flex-wrap: nowrap;
     overflow-x: auto;
+    overflow-y: hidden;
     padding-bottom: 10px;
-    min-width: 100%;
+    min-width: 0;
+    width: 100%;
     gap: 10px;
-    /* Hide scrollbar for cleaner look */
-    scrollbar-width: none; 
+    scrollbar-width: none;
     -ms-overflow-style: none;
+    -webkit-overflow-scrolling: touch;
   }
 
   .projects-sidebar::-webkit-scrollbar {
     display: none;
   }
 
-  .category-button {
+  .projects-container .category-button {
     white-space: nowrap;
     padding: 10px 18px;
     font-size: 0.85rem;
     border-radius: 20px;
+    flex: 0 0 auto;
+    width: auto;
   }
 
   .project-item:hover {
-    transform: translateY(-3px); /* Change hover to lift up instead of sideways */
+    transform: translateY(-3px);
   }
-  
+
   .projects-title { font-size: 2rem; }
+
+  .projects-content { width: 100%; min-width: 0; }
 }
 
 @media (max-width: 480px) {
   .projects-container { padding: 50px 4%; }
-  
+
   .projects-title { font-size: 1.8rem; }
   .projects-subtitle { font-size: 0.85rem; }
+
+  .projects-container .category-button {
+    padding: 9px 14px;
+    font-size: 0.78rem;
+    border-radius: 18px;
+  }
 
   .project-item {
     padding: 15px;
     gap: 12px;
   }
-  
+
   .project-name { font-size: 1rem; }
-  
+
   .link-icon {
     font-size: 0.8rem;
   }
