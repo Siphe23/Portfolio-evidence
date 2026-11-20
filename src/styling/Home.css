@@ -38,7 +38,7 @@
 .blob-1 {
   top: -10%; right: -5%;
   width: 500px; height: 500px;
-  background: rgba(24, 212, 238, 0.15); /* Cyan glow */
+  background: rgba(24, 212, 238, 0.15);
 }
 
 .blob-2 {
@@ -126,14 +126,15 @@
   max-width: 90%;
 }
 
-/* Buttons */
-.btn-container {
+/* --- BUTTONS (scoped to home page only) --- */
+.home-wrapper .btn-container {
   display: flex;
   gap: 15px;
   margin-bottom: 25px;
 }
 
-.btn-primary, .btn-secondary {
+.home-wrapper .btn-primary,
+.home-wrapper .btn-secondary {
   display: flex;
   align-items: center;
   gap: 10px;
@@ -144,27 +145,28 @@
   cursor: pointer;
   text-decoration: none;
   transition: all 0.3s ease;
+  white-space: nowrap;
 }
 
-.btn-primary {
+.home-wrapper .btn-primary {
   background: #18d4ee;
   color: #0f0e17;
   border: none;
   box-shadow: 0 4px 15px rgba(24, 212, 238, 0.4);
 }
 
-.btn-primary:hover {
+.home-wrapper .btn-primary:hover {
   transform: translateY(-3px);
   box-shadow: 0 8px 25px rgba(24, 212, 238, 0.6);
 }
 
-.btn-secondary {
+.home-wrapper .btn-secondary {
   background: transparent;
   color: #fff;
   border: 2px solid rgba(255, 255, 255, 0.2);
 }
 
-.btn-secondary:hover {
+.home-wrapper .btn-secondary:hover {
   border-color: #18d4ee;
   color: #18d4ee;
   background: rgba(24, 212, 238, 0.05);
@@ -208,7 +210,6 @@
   position: relative;
   z-index: 5;
   box-shadow: 0 0 40px rgba(24, 212, 238, 0.2);
-  /* If your image isn't a cutout PNG, you might want to use object-fit: cover and a fixed height */
 }
 
 /* Glowing Orbital Rings */
@@ -368,13 +369,30 @@
 
   .intro { max-width: 100%; }
   .bio-text { margin: 0 auto 30px auto; }
-  .btn-container { justify-content: center; flex-direction: column; width: 100%; }
-  .btn-primary, .btn-secondary { justify-content: center; width: 100%; }
   .contact-info-inline { flex-direction: column; align-items: center; gap: 10px; }
-  
+
   .image-container { margin-top: 20px; }
   .image-wrapper img { max-width: 300px; }
-  
+
+  /* Buttons: compact, side-by-side, won't stretch */
+  .home-wrapper .btn-container {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 100%;
+    gap: 12px;
+  }
+
+  .home-wrapper .btn-primary,
+  .home-wrapper .btn-secondary {
+    flex: 0 1 auto;
+    width: auto;
+    max-width: none;
+    padding: 12px 22px;
+    font-size: 0.9rem;
+    justify-content: center;
+  }
+
   .stats-bar {
     flex-direction: column;
     align-items: flex-start;
@@ -388,7 +406,22 @@
   .role-title { font-size: 0.9rem; }
   .bio-text { font-size: 0.95rem; }
   .availability-badge { font-size: 0.75rem; }
-  
+
+  /* Stack buttons but cap width so they don't look huge */
+  .home-wrapper .btn-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .home-wrapper .btn-primary,
+  .home-wrapper .btn-secondary {
+    width: 100%;
+    max-width: 260px;
+    padding: 11px 18px;
+    font-size: 0.85rem;
+    justify-content: center;
+  }
+
   .scroll-line { width: 30px; }
   .image-wrapper img { max-width: 250px; }
 }
